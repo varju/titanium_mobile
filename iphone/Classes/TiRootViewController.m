@@ -89,6 +89,16 @@
 	}
 	*imageOrientation = UIDeviceOrientationPortrait;
 	*imageIdiom = UIUserInterfaceIdiomPhone;
+
+	// iPhone 4 
+	CGFloat screenScale = [[UIScreen mainScreen] scale];
+	if (2.0f == screenScale) {
+		image = [UIImage imageNamed:@"Default@2x.png"];
+	}
+	if (image != nil) {
+		return image;
+	}
+
 	// Default 
 	return [UIImage imageNamed:@"Default.png"];
 }
