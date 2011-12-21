@@ -48,7 +48,7 @@
 
 - (UIImage*)defaultImageForOrientation:(UIDeviceOrientation) orientation resultingOrientation:(UIDeviceOrientation *)imageOrientation idiom:(UIUserInterfaceIdiom*) imageIdiom
 {	
-	UIImage* image;
+	UIImage* image = nil;
 	
 	if([TiUtils isIPad])
 	{
